@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Anurag Analytics Store 🚀</title>
+
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WJNNM3W6');</script>
-<!-- End Google Tag Manager -->
-  <title>Anurag Analytics Project</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id=GTM-WJNNM3W6'+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJNNM3W6');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    body { font-family: Arial; text-align: center; }
+    .product { border: 1px solid #ccc; padding: 20px; margin: 20px; display: inline-block; }
+    button { padding: 10px 20px; cursor: pointer; }
+  </style>
 </head>
+
 <body>
-<!-- Google Tag Manager (noscript) -->
+
+<!-- GTM NoScript -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJNNM3W6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<h1>Welcome to My Analytics Website 🚀</h1>
 
-<p>This is my GA4 + GTM learning project</p>
+<h1>🛍️ Anurag Analytics Store</h1>
+<p>Track user behavior with GA4 + GTM</p>
 
+<!-- PRODUCT 1 -->
+<div class="product">
+  <h2>Product A</h2>
+  <p>Price: ₹499</p>
+  <button onclick="viewProduct('Product A')">View Product</button>
+  <button onclick="addToCart('Product A')">Add to Cart</button>
+</div>
+
+<!-- PRODUCT 2 -->
+<div class="product">
+  <h2>Product B</h2>
+  <p>Price: ₹999</p>
+  <button onclick="viewProduct('Product B')">View Product</button>
+  <button onclick="addToCart('Product B')">Add to Cart</button>
+</div>
+
+<!-- SIGNUP -->
+<h2>Join Us</h2>
 <button onclick="signup()">Sign Up</button>
 
 <script>
 function signup() {
-  alert("Signup button clicked!");
+  alert("Signup clicked!");
+  dataLayer.push({
+    event: "sign_up_click"
+  });
+}
+
+function viewProduct(productName) {
+  alert(productName + " viewed!");
+  dataLayer.push({
+    event: "view_product",
+    product_name: productName
+  });
+}
+
+function addToCart(productName) {
+  alert(productName + " added to cart!");
+  dataLayer.push({
+    event: "add_to_cart",
+    product_name: productName
+  });
 }
 </script>
 
